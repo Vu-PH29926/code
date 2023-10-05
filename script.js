@@ -1,32 +1,35 @@
-const gameEvents =  new Map([
-    [17, 'Goal'],
-    [36, 'Substitution'],
-    [47, 'Goal'],
-    [61, 'Substitutiom'],
-    [64, 'Yellow Card'],
-    [69, 'Red card'],
-    [70, 'Substistution'],
-    [72, 'Substitution'],
-    [76, 'Goal'],
-    [80, 'Goal'],
-    [92, 'Yellow Cảd'],  
-
-]);
-//1
-const events = new Set(gameEvents.values());
-console.log(events);
-
-//2
-gameEvents.delete(64);
-
-//3
-console.log(`An event happened , on average , event ${90 / gameEvents.size} minutes`);
-const time  = [...gameEvents.keys()].pop();
-console.log(time);
-console.log(`An event happened , on average , event ${time / gameEvents.size} minutes`);
-
-//4
-for (const [min,event] of gameEvents){
-    const half  = min <= 45 ? 'first' : 'second';
-    console.log(`[${half} half] ${min} : ${event}`);
-}
+// Data
+const account1 = {
+    owner: 'Jonas Schmedtmann',
+    movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+    interestRate: 1.2, // % 
+    pin: 1111,
+    };
+    const account2 = {
+    owner: 'Jessica Davis',
+     movements: [
+        5000,3400,-150,-790,-3210,-1000,
+        8500,-30
+     ],
+     interestRate:1.5,
+     pin:2000,
+    };
+    
+    const account3 = {
+    owner: 'Steven Thomas Williams',
+    movements:[200,-200,340,-300,-20,50,400,-460],
+    interestRate:0.7,
+    pin: 3333,
+    };
+    
+    const account4 = {
+    owner: 'Sarah Smith',
+    movements: [430, 1000, 700, 50, 90],
+    interestRate: 1,
+    pin: 4444,
+    };
+    const accounts =[account1,account2,account3,account4];
+    //element
+    const labeWelcome = document.querySelector('.welcome');
+    const lableDate  = document.querySelector('.date');
+     
